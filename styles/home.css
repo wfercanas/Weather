@@ -64,9 +64,26 @@ body.night .hourly-data__content--icon {
 }
 
 /* Hourly data section */
+.hourly-data__content {
+  margin: 1rem 0;
+  display: flex;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+
+.hourly-data__content--block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.hourly-data__content--block:first-child {
+  margin-left: 0;
+}
+
 .hourly-data__headers {
   padding: 1rem 1rem 0 0;
-
   font-size: 0.8rem;
   font-weight: bold;
   display: flex;
@@ -86,24 +103,6 @@ body.night .hourly-data__content--icon {
 .hourly-data__headers a:hover {
   cursor: pointer;
   text-decoration: underline;
-}
-
-.hourly-data__content {
-  margin: 1rem 0;
-  display: flex;
-  max-width: 100%;
-  overflow-x: scroll;
-}
-
-.hourly-data__content--block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 1rem;
-}
-
-.hourly-data__content--block:first-child {
-  margin-left: 0;
 }
 
 .hourly-data__content--hour {
