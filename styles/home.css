@@ -36,8 +36,23 @@
   font-size: 20rem;
   right: -7rem;
   top: -4rem;
+}
+
+body.day .main-data__icon {
   color: var(--red);
   background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.night .main-data__icon {
+  color: var(--red);
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--blue),
+    var(--darkpurple),
+    var(--purple)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
