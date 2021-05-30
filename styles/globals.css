@@ -1,3 +1,15 @@
+:root {
+  --day: #fffcf7;
+  --dimday: #e0e0e0;
+  --orange: #ffb080;
+  --red: #fb1970;
+  --night: #081b25;
+  --dimnight: #283b45;
+  --blue: #28aefd;
+  --purple: #ca4bf1;
+  --darkpurple: #57438e;
+}
+
 .icon:before {
   font-family: 'MeteoconsRegular';
   content: attr(data-icon);
