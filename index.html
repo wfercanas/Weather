@@ -6,13 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./styles/icons-weather.css" />
+    <link rel="stylesheet" href="./styles/icons-general.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <title>Weather App</title>
   </head>
   <body class="day">
-    <section class="main-data"></section>
-    <section class="hourly-data"></section>
-    <section class="complement-data"></section>
-    <section class="menu"></section>
+    <section class="main-data">
+      <div>
+        <p class="main-data__city">San Francisco</p>
+        <p class="main-data__temp">18°</p>
+      </div>
+      <i class="main_data__icon icon" data-icon="B"></i>
+    </section>
+    <section class="hourly-data">
+      <div class="hourly-data__headers">
+        <p>Today</p>
+        <a href="/">Next 7 days</a>
+      </div>
+      <div class="hourly-data__content">
+        <div>
+          <p class="hourly-data__content--hour">Now</p>
+          <i class="hourly-data__content--icon icon" data-icon="F"></i>
+          <p class="hourly-data__content--temp">-1°</p>
+        </div>
+      </div>
+    </section>
+    <section class="complement-data">
+      <div class="complement-data__indicator">
+        <p class="complement-data__indicator--title">Sunrise</p>
+        <p class="complement-data__indicator--value">7:38am</p>
+      </div>
+    </section>
+    <section class="menu">
+      <i class="menu__item icon-home"></i>
+      <i class="menu__item icon-calendar"></i>
+      <i class="menu__item icon-heart"></i>
+      <i class="menu__item icon-search"></i>
+    </section>
   </body>
 </html>
