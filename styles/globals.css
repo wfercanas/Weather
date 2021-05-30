@@ -8,6 +8,7 @@
   --blue: #28aefd;
   --purple: #ca4bf1;
   --darkpurple: #57438e;
+  --gray: #aaaaaa;
 }
 
 body {
@@ -36,4 +37,22 @@ i {
 .icon:before {
   font-family: 'MeteoconsRegular';
   content: attr(data-icon);
+}
+
+/* Menu */
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray);
+  font-size: 1.2rem;
+}
+
+.menu i:hover {
+  cursor: pointer;
+  scale: 1.2;
 }

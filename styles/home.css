@@ -141,7 +141,10 @@ body.night .complement-data__indicator--title {
 }
 
 .complement-data__indicator--value {
-  font-size: 0.9rem;
   font-weight: bold;
   margin: 0.5rem 0 0.8rem;
+}
+
+body.day #home-button {
+  color: var(--dimnight);
 }
