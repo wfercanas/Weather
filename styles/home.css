@@ -13,7 +13,7 @@
 /* Main data section */
 .main-data {
   position: relative;
-  padding: 3rem 0 6rem;
+  padding: 2rem 0 3rem;
 }
 
 .main-data div {
@@ -37,9 +37,9 @@
 
 .main-data__icon {
   position: absolute;
-  font-size: 20rem;
-  right: -7rem;
-  top: -4rem;
+  font-size: 16rem;
+  right: -5rem;
+  top: -3rem;
 }
 
 body.day .main-data__icon,
