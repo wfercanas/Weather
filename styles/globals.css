@@ -10,6 +10,23 @@
   --darkpurple: #57438e;
 }
 
+body {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body.day {
+  background-color: var(--day);
+  color: var(--night);
+}
+
+body.night {
+  background-color: var(--night);
+  color: var(--day);  
+}
+
 .icon:before {
   font-family: 'MeteoconsRegular';
   content: attr(data-icon);
