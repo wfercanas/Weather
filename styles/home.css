@@ -1,0 +1,43 @@
+/* Sections margins */
+.main-data,
+.hourly-data,
+.complement-data {
+  margin-left: 1rem;
+}
+
+.main-data,
+.complement-data {
+  margin-right: 1rem;
+}
+
+/* Main data section */
+.main-data {
+  position: relative;
+  padding-top: 3rem;
+}
+
+.main-data div {
+  margin-left: 1rem;
+}
+
+.main-data__city {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.main-data__temp {
+  font-size: 4rem;
+  margin: 0.2rem 0;
+}
+
+.main-data__icon {
+  position: absolute;
+  font-style: normal;
+  font-size: 20rem;
+  right: -7rem;
+  top: -4rem;
+  color: var(--red);
+  background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
