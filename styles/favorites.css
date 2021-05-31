@@ -44,7 +44,8 @@ body {
 }
 
 .city,
-.country {
+.country,
+.location {
   font-size: 0.7rem;
   margin-bottom: 0;
 }
