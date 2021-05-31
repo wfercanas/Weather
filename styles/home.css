@@ -148,3 +148,7 @@ body.night .complement-data__indicator--title {
 body.day #home-button {
   color: var(--dimnight);
 }
+
+body.night #home-button {
+  color: var(--dimday);
+}
