@@ -48,11 +48,15 @@ i {
   padding: 2rem 4rem;
   display: flex;
   justify-content: space-between;
-  color: var(--gray);
   font-size: 1.2rem;
 }
 
-.menu i:hover {
+.menu a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.menu a:hover {
   cursor: pointer;
   scale: 1.2;
 }
