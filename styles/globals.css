@@ -9,6 +9,7 @@
   --purple: #ca4bf1;
   --darkpurple: #57438e;
   --gray: #aaaaaa;
+  --white: #ffffff;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body.day {
@@ -45,7 +46,7 @@ i {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   display: flex;
   justify-content: space-between;
   font-size: 1.2rem;
@@ -59,4 +60,12 @@ i {
 .menu a:hover {
   cursor: pointer;
   scale: 1.2;
+}
+
+body.day .menu {
+  background-color: var(--day);
+}
+
+body.night .menu {
+  background-color: var(--night);
 }

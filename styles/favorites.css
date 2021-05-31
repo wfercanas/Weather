@@ -1,0 +1,109 @@
+/* Globals specific for this page */
+body {
+  margin: 1rem 1rem 5rem;
+}
+
+/* Page Title */
+.favorites__title {
+  text-align: center;
+}
+
+/* Cards */
+.favorites__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0 2rem;
+}
+
+.favorites__card {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--white);
+  box-shadow: 1px 1px 5px 1px var(--dimday);
+}
+
+.favorites__card:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 12px 1px var(--dimday);
+}
+
+.favorites__card--main-data {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorites__card--main-data i {
+  font-size: 3rem;
+}
+
+.temp {
+  font-size: 1.5rem;
+  margin: 0.5rem 0 0;
+}
+
+.city,
+.country {
+  font-size: 0.7rem;
+  margin-bottom: 0;
+}
+
+.favorites__card--other-data {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.favorites__card--other-data div {
+  display: flex;
+  align-items: center;
+}
+
+.favorites__card--other-data p {
+  font-size: 0.7rem;
+  margin: 0 0.2rem;
+}
+
+.favorites__card--other-data i {
+  font-size: 0.7rem;
+}
+
+.favorites__card--other-data .icon {
+  font-size: 1rem;
+}
+
+/* Colors */
+body.night .favorites__card {
+  background-color: var(--dimnight);
+}
+
+body.day .favorites__card--main-data i {
+  color: var(--red);
+  background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.night .favorites__card--main-data i {
+  color: var(--red);
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--blue),
+    var(--darkpurple),
+    var(--purple),
+    var(--blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Menu */
+
+body.day #favorites-button {
+  color: var(--dimnight);
+}
+
+body.night #favorites-button {
+  color: var(--white);
+}
