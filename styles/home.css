@@ -1,3 +1,8 @@
+/* Global styles specific for this page */
+body {
+  overflow: hidden;
+}
+
 /* Sections margins */
 .main-data,
 .hourly-data,
