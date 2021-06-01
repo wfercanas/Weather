@@ -1,0 +1,98 @@
+/* Globals specific for this page */
+body {
+  margin: 1rem 2rem 3rem;
+}
+
+h1 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+p {
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Location */
+.location {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.country {
+  font-weight: normal;
+}
+
+/* Current data */
+.day__container {
+  margin-top: 1.5rem;
+}
+
+.day__data {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+}
+
+.day__data div {
+  display: flex;
+  align-items: center;
+}
+
+.day__data i {
+  font-size: 2rem;
+}
+
+.day__data p {
+  margin-left: 0.5rem;
+}
+
+.lowest-temp {
+  color: var(--gray);
+}
+
+.day__indicators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 0.7rem;
+  gap: 0.5rem 2rem;
+}
+
+.day__indicators div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.indicator-value {
+  color: var(--gray);
+}
+
+/* Menu */
+body.day #calendar-button {
+  color: var(--night);
+}
+
+body.night #calendar-button {
+  color: var(--day);
+}
+
+/* Colors */
+body.day .icon {
+  color: var(--red);
+  background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.night .icon {
+  color: var(--red);
+  background: -webkit-linear-gradient(
+    -45deg,
+    var(--blue),
+    var(--darkpurple),
+    var(--purple),
+    var(--blue)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
