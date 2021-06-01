@@ -1,0 +1,44 @@
+/* Global styles specific for this page */
+body {
+  padding: 2rem;
+}
+
+/* Search bar */
+.search-bar {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 3px 1px var(--dimday);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.search-input {
+  width: 85%;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.icon-search {
+  border: none;
+  background-color: transparent;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.icon-search:hover {
+  cursor: pointer;
+}
+
+/* Menu */
+body.day #search-button {
+  color: var(--night);
+}
+
+body.night #search-button {
+  color: var(--day);
+}

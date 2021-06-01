@@ -8,7 +8,30 @@
     <link rel="stylesheet" href="../styles/icons-weather.css" />
     <link rel="stylesheet" href="../styles/icons-general.css" />
     <link rel="stylesheet" href="../styles/globals.css" />
+    <link rel="stylesheet" href="../styles/search.css" />
     <title>Weather App</title>
   </head>
-  <body></body>
+  <body class="day">
+    <form>
+      <div class="search-bar">
+        <input class="search-input" type="text" placeholder="Search" />
+        <button type="submit" class="icon-search"></button>
+      </div>
+    </form>
+    <section class="results"></section>
+    <section class="menu">
+      <a href="../index.html"
+        ><i id="home-button" class="menu__item icon-home"></i
+      ></a>
+      <a href="./calendar.html"
+        ><i id="calendar-button" class="menu__item icon-calendar"></i
+      ></a>
+      <a href="#"
+        ><i id="favorites-button" class="menu__item icon-heart"></i
+      ></a>
+      <a href="./search.html"
+        ><i id="search-button" class="menu__item icon-search"></i
+      ></a>
+    </section>
+  </body>
 </html>
