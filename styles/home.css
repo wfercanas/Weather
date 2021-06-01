@@ -47,6 +47,11 @@ body {
   top: -3rem;
 }
 
+.main-data__heart {
+  display: block;
+  margin-top: 1rem;
+}
+
 body.day .main-data__icon,
 body.day .hourly-data__content--icon {
   color: var(--red);
