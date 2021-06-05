@@ -6,6 +6,7 @@ import { setCurrentCityWeather } from './functions/setCurrentCityWeather.js';
 import { setCurrentCityIndicators } from './functions/setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './functions/setCurrentCityHourlyWeather.js';
 import { setCurrentCityNextSevenDaysWeather } from './functions/setCurrentCityNextSevenDaysWeather.js';
+import { setFavoriteCities } from './functions/setFavoriteCities.js';
 
 let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];
@@ -22,7 +23,10 @@ window
     setCurrentCityHourlyWeather(cityWeather);
     /* Main Indicators */
     setCurrentCityIndicators(cityWeather);
+    /* Next seven day forecast*/
     setCurrentCityNextSevenDaysWeather(cityWeather);
+    /* Favorite cities cards*/
+    setFavoriteCities(favoriteCities);
   });
 
 /* Event Listeners */
