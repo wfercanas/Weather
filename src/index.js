@@ -3,40 +3,14 @@ import { favoriteCities } from './utils/favoriteCities.js';
 import { weatherIconsTranslation } from './utils/weatherIconsTranslation.js';
 
 /* DOM Elements */
-import {
-  currentHourlyValues,
-  currentSunriseValue,
-  currentUvValue,
-  currentWindValue,
-  currentSunsetValue,
-  currentPressureValue,
-  currentHumidityValue,
-} from './utils/DOMElements.js';
+import { currentHourlyValues } from './utils/DOMElements.js';
 
 /* Functions */
 import { setCurrentCityWeather } from './functions/setCurrentCityWeather.js';
+import { setCurrentCityIndicators } from './functions/setCurrentCityIndicators.js';
 
 let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];
-
-/* Return time in city time */
-const timestampToCityTime = (timestamp, timezone) => {
-  const localTime = new Date(timestamp * 1000);
-  const cityTime = new Date(
-    localTime.toLocaleString('en-US', { timeZone: timezone })
-  );
-  const cityTimeHourAndMinutes = {
-    hour: `${
-      cityTime.getHours() < 10 ? '0' + cityTime.getHours() : cityTime.getHours()
-    }`,
-    minutes: `${
-      cityTime.getMinutes() < 10
-        ? '0' + cityTime.getMinutes()
-        : cityTime.getMinutes()
-    }`,
-  };
-  return cityTimeHourAndMinutes;
-};
 
 /* Create hourly weather */
 const setCurrentCityHourlyWeather = (cityWeather) => {
@@ -67,26 +41,6 @@ const setCurrentCityHourlyWeather = (cityWeather) => {
     hourBlock.append(hour, weatherIcon, temp);
     currentHourlyValues.appendChild(hourBlock);
   }
-};
-
-/* Set Current City Indicators */
-const setCurrentCityIndicators = (cityWeather) => {
-  currentSunriseValue.textContent = `${
-    timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone).hour
-  }:${
-    timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone)
-      .minutes
-  }`;
-  currentSunsetValue.textContent = `${
-    timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone).hour
-  }:${
-    timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone)
-      .minutes
-  }`;
-  currentUvValue.textContent = `${cityWeather.current.uvi}`;
-  currentHumidityValue.textContent = `${cityWeather.current.humidity}%`;
-  currentPressureValue.textContent = `${cityWeather.current.pressure} hPa`;
-  currentWindValue.textContent = `${cityWeather.current.wind_speed} km/h`;
 };
 
 /* Fetch API */
