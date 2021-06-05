@@ -3,18 +3,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Sections margins */
-.main-data,
-.hourly-data,
-.complement-data {
-  margin-left: 1rem;
-}
-
-.main-data,
-.complement-data {
-  margin-right: 1rem;
-}
-
 /* Main data section */
 .main-data {
   position: relative;
