@@ -5,6 +5,7 @@ import { favoriteCities } from './utils/favoriteCities.js';
 import { setCurrentCityWeather } from './functions/setCurrentCityWeather.js';
 import { setCurrentCityIndicators } from './functions/setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './functions/setCurrentCityHourlyWeather.js';
+import { setCurrentCityNextSevenDaysWeather } from './functions/setCurrentCityNextSevenDaysWeather.js';
 
 let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];
@@ -21,6 +22,7 @@ window
     setCurrentCityHourlyWeather(cityWeather);
     /* Main Indicators */
     setCurrentCityIndicators(cityWeather);
+    setCurrentCityNextSevenDaysWeather(cityWeather);
   });
 
 /* Event Listeners */
