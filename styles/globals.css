@@ -48,6 +48,10 @@ h2 {
   margin-top: 2rem;
 }
 
+p {
+  font-size: 0.8rem;
+}
+
 .icon:before {
   font-family: 'MeteoconsRegular';
   content: attr(data-icon);
