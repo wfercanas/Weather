@@ -77,22 +77,9 @@ body.night #calendar-button {
 }
 
 /* Colors */
-body.day .icon {
+.icon {
   color: var(--red);
   background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-body.night .icon {
-  color: var(--red);
-  background: -webkit-linear-gradient(
-    -45deg,
-    var(--blue),
-    var(--darkpurple),
-    var(--purple),
-    var(--blue)
-  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
