@@ -31,6 +31,14 @@ body.night {
   color: var(--day);
 }
 
+body.day .menu {
+  background-color: var(--day);
+}
+
+body.night .menu {
+  background-color: var(--night);
+}
+
 i {
   font-style: normal;
 }
@@ -62,10 +70,3 @@ i {
   scale: 1.2;
 }
 
-body.day .menu {
-  background-color: var(--day);
-}
-
-body.night .menu {
-  background-color: var(--night);
-}
