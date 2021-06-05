@@ -1,16 +1,11 @@
 /* Globals specific for this page */
-body {
+#next-seven {
   margin: 1rem 2rem 3rem;
 }
 
-h1 {
+#next-seven h1 {
   font-size: 1rem;
   margin-top: 2rem;
-}
-
-p {
-  font-weight: bold;
-  margin: 0;
 }
 
 /* Location */
@@ -25,13 +20,13 @@ p {
 
 /* Current data */
 .day__container {
-  margin-top: 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .day__data {
   display: flex;
   justify-content: space-between;
-  margin: 0.8rem 0;
+  margin: 0.5rem 0;
 }
 
 .day__data div {
@@ -44,7 +39,7 @@ p {
 }
 
 .day__data p {
-  margin-left: 0.5rem;
+  margin: 0 0 0 0.5rem;
 }
 
 .lowest-temp {
@@ -56,6 +51,11 @@ p {
   grid-template-columns: repeat(2, 1fr);
   font-size: 0.7rem;
   gap: 0.5rem 2rem;
+}
+
+.day__indicators p {
+  margin: 0;
+  font-weight: bold;
 }
 
 .day__indicators div {
