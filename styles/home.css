@@ -83,12 +83,6 @@ body.night .complement-data__indicator--title {
   margin-left: 0;
 }
 
-.hourly-data__header {
-  font-size: 0.8rem;
-  font-weight: bold;
-  margin: 0;
-}
-
 .hourly-data__content--hour {
   font-size: 0.6rem;
   margin: 0 0 0.3rem;

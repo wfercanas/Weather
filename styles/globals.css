@@ -43,6 +43,11 @@ i {
   font-style: normal;
 }
 
+h2 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
 .icon:before {
   font-family: 'MeteoconsRegular';
   content: attr(data-icon);
@@ -69,4 +74,3 @@ i {
   cursor: pointer;
   scale: 1.2;
 }
-
