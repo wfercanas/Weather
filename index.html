@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/home.css" />
     <link rel="stylesheet" href="./styles/nextseven.css" />
+    <link rel="stylesheet" href="./styles/favorites.css" />
     <script src="./src/index.js" type="module" defer></script>
     <title>Weather App</title>
   </head>
@@ -59,6 +60,32 @@
     <section id="next-seven">
       <h1>Next 7 days</h1>
       <div class="day__container"></div>
+    </section>
+    <section class="favorites__title">
+      <h1>Favorite Cities</h1>
+    </section>
+    <section class="favorites__container">
+      <div class="favorites__card">
+        <div class="favorites__card--main-data">
+          <div class="favorites__card--main-data-values">
+            <p class="temp">22°</p>
+            <p class="location">
+              <span class="city">Austin</span>, <span class="country">US</span>
+            </p>
+          </div>
+          <i class="icon" data-icon="B"></i>
+        </div>
+        <div class="favorites__card--other-data">
+          <div>
+            <i class="icon-droplet"></i>
+            <p class="precipitation">27%</p>
+          </div>
+          <div>
+            <i class="icon" data-icon="F"></i>
+            <p class="wind">7 km/h</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="menu">
       <a href="/"><i id="home-button" class="menu__item icon-home"></i></a>
