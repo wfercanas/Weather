@@ -20,6 +20,9 @@ const currentHumidityValue = document.getElementById('humidity');
 /* Daily values */
 const currentNextSevenContainer = document.querySelector('.day__container');
 
+/* Cards */
+const favoritesContainer = document.querySelector('.favorites__container');
+
 export {
   currentWeatherIcon,
   currentCityLabel,
@@ -33,4 +36,5 @@ export {
   currentPressureValue,
   currentHumidityValue,
   currentNextSevenContainer,
+  favoritesContainer,
 };
