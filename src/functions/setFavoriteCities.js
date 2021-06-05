@@ -4,6 +4,7 @@ import { favoritesContainer } from '../utils/DOMElements.js';
 import { weatherIconsTranslation } from '../utils/weatherIconsTranslation.js';
 
 const setFavoriteCities = (cities) => {
+  let cityIndex = 0;
   cities.forEach((city) => {
     /* Create DOM elements */
     const favoritesCard = document.createElement('div');
@@ -56,6 +57,8 @@ const setFavoriteCities = (cities) => {
     favoritesContainer.appendChild(favoritesCard);
 
     /* Values */
+    favoritesCard.setAttribute('city-index', cityIndex);
+    cityIndex++;
     favoriteCityName.textContent = city.city;
     favoriteCityCountry.textContent = city.country;
     favoriteCityLocation.append(favoriteCityName, favoriteCityCountry);
