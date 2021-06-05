@@ -1,6 +1,8 @@
-import { favoriteCities } from './favoriteCities.js';
 import { coordinatesURL } from './API.js';
+import { favoriteCities } from './favoriteCities.js';
+import { weatherIconsTranslation } from './weatherIconsTranslation.js';
 import {
+  currentWeatherIcon,
   currentCityLabel,
   currentTempLabel,
   currentFeelTempLabel,
@@ -13,7 +15,7 @@ import {
   currentHumidityValue,
 } from './DOMElements.js';
 
-let selectedCityIndex = 1;
+let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];
 
 /* Return time in city time */
@@ -65,6 +67,10 @@ window
   .then((cityWeather) => {
     console.log(cityWeather);
     /* Main Data */
+    currentWeatherIcon.setAttribute(
+      'data-icon',
+      weatherIconsTranslation[`I${cityWeather.current.weather[0].icon}`]
+    );
     currentCityLabel.textContent = selectedCity.city;
     currentTempLabel.textContent = `${Math.round(cityWeather.current.temp)}°`;
     currentFeelTempLabel.textContent = `Feels like ${Math.round(
