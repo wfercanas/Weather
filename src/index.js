@@ -1,6 +1,8 @@
 import { coordinatesURL } from './API.js';
 import { favoriteCities } from './favoriteCities.js';
 import { weatherIconsTranslation } from './weatherIconsTranslation.js';
+
+/* DOM Elements */
 import {
   currentWeatherIcon,
   currentCityLabel,
@@ -14,6 +16,9 @@ import {
   currentPressureValue,
   currentHumidityValue,
 } from './DOMElements.js';
+
+/* Functions */
+import { setCurrentCityWeather } from './setCurrentCityWeather.js';
 
 let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];
@@ -68,19 +73,6 @@ const setCurrentCityHourlyWeather = (cityWeather) => {
   }
 };
 
-/* Set Current City Weather */
-const setCurrentCityWeather = (cityWeather) => {
-  currentWeatherIcon.setAttribute(
-    'data-icon',
-    weatherIconsTranslation[`I${cityWeather.current.weather[0].icon}`]
-  );
-  currentCityLabel.textContent = selectedCity.city;
-  currentTempLabel.textContent = `${Math.round(cityWeather.current.temp)}°`;
-  currentFeelTempLabel.textContent = `Feels like ${Math.round(
-    cityWeather.current.feels_like
-  )}°`;
-};
-
 /* Set Current City Indicators */
 const setCurrentCityIndicators = (cityWeather) => {
   currentSunriseValue.textContent = `${
@@ -108,7 +100,7 @@ window
   .then((cityWeather) => {
     console.log(cityWeather);
     /* Main Data */
-    setCurrentCityWeather(cityWeather);
+    setCurrentCityWeather(cityWeather, selectedCity.city);
     /* Next 24 hours data */
     setCurrentCityHourlyWeather(cityWeather);
     /* Main Indicators */
