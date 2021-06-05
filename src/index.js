@@ -4,10 +4,6 @@ import { weatherIconsTranslation } from './utils/weatherIconsTranslation.js';
 
 /* DOM Elements */
 import {
-  currentWeatherIcon,
-  currentCityLabel,
-  currentTempLabel,
-  currentFeelTempLabel,
   currentHourlyValues,
   currentSunriseValue,
   currentUvValue,
