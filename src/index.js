@@ -1,32 +1,24 @@
-import { coordinatesURL } from './utils/API.js';
+/* Utils */
 import { favoriteCities } from './utils/favoriteCities.js';
+import { favoritesContainer } from './utils/DOMElements.js';
 
 /* Functions */
-import { setCurrentCityWeather } from './functions/setCurrentCityWeather.js';
-import { setCurrentCityIndicators } from './functions/setCurrentCityIndicators.js';
-import { setCurrentCityHourlyWeather } from './functions/setCurrentCityHourlyWeather.js';
-import { setCurrentCityNextSevenDaysWeather } from './functions/setCurrentCityNextSevenDaysWeather.js';
-import { setFavoriteCities } from './functions/setFavoriteCities.js';
+import { fetchInitialCityWeather } from './functions/fetchInitialCityWeather.js';
+import { fetchNewCityWeather } from './functions/fetchNewCityWeather.js';
+import { getSelectedFavoriteCity } from './functions/getSelectedFavoriteCity.js';
 
+/* Initial values */
 let selectedCityIndex = 0;
-const selectedCity = favoriteCities[selectedCityIndex];
+let selectedCity = favoriteCities[selectedCityIndex];
 
-/* Fetch API */
-window
-  .fetch(coordinatesURL(selectedCity.lat, selectedCity.lon))
-  .then((response) => response.json())
-  .then((cityWeather) => {
-    console.log(cityWeather);
-    /* Main Data */
-    setCurrentCityWeather(cityWeather, selectedCity.city);
-    /* Next 24 hours data */
-    setCurrentCityHourlyWeather(cityWeather);
-    /* Main Indicators */
-    setCurrentCityIndicators(cityWeather);
-    /* Next seven day forecast*/
-    setCurrentCityNextSevenDaysWeather(cityWeather);
-    /* Favorite cities cards*/
-    setFavoriteCities(favoriteCities);
-  });
+/* Change current city */
+const changeSelectedCity = (event) => {
+  const index = getSelectedFavoriteCity(event);
+  selectedCityIndex = index;
+  selectedCity = favoriteCities[selectedCityIndex];
+  fetchNewCityWeather(selectedCity);
+};
 
 /* Event Listeners */
+window.addEventListener('load', fetchInitialCityWeather(selectedCity));
+favoritesContainer.addEventListener('click', changeSelectedCity);
