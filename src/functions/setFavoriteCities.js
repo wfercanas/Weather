@@ -58,7 +58,7 @@ const setFavoriteCities = (cities) => {
     /* Values */
     favoriteCityName.textContent = city.city;
     favoriteCityCountry.textContent = city.country;
-    favoriteCityLocation.textContent = `${favoriteCityName.textContent}, ${favoriteCityCountry.textContent}`;
+    favoriteCityLocation.append(favoriteCityName, favoriteCityCountry);
     windIcon.setAttribute('data-icon', 'F');
     window
       .fetch(cityURL(city.city, city.country))
