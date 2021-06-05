@@ -1,6 +1,6 @@
-import { coordinatesURL } from './API.js';
-import { favoriteCities } from './favoriteCities.js';
-import { weatherIconsTranslation } from './weatherIconsTranslation.js';
+import { coordinatesURL } from './utils/API.js';
+import { favoriteCities } from './utils/favoriteCities.js';
+import { weatherIconsTranslation } from './utils/weatherIconsTranslation.js';
 
 /* DOM Elements */
 import {
@@ -15,10 +15,10 @@ import {
   currentSunsetValue,
   currentPressureValue,
   currentHumidityValue,
-} from './DOMElements.js';
+} from './utils/DOMElements.js';
 
 /* Functions */
-import { setCurrentCityWeather } from './setCurrentCityWeather.js';
+import { setCurrentCityWeather } from './functions/setCurrentCityWeather.js';
 
 let selectedCityIndex = 0;
 const selectedCity = favoriteCities[selectedCityIndex];

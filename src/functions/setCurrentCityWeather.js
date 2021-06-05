@@ -4,10 +4,10 @@ import {
   currentWeatherIcon,
   currentTempLabel,
   currentFeelTempLabel,
-} from './DOMElements.js';
+} from '../utils/DOMElements.js';
 
 /* Functions */
-import { weatherIconsTranslation } from './weatherIconsTranslation.js';
+import { weatherIconsTranslation } from '../utils/weatherIconsTranslation.js';
 
 /* Set Current City Weather */
 const setCurrentCityWeather = (cityWeather, currentCityName) => {
