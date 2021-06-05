@@ -38,29 +38,67 @@ const timestampToCityTime = (timestamp, timezone) => {
 };
 
 /* Create hourly weather */
-const createHourlyWeather = (cityWeatherPerHour, timezone) => {
-  const hourBlock = document.createElement('div');
-  const hour = document.createElement('p');
-  const weatherIcon = document.createElement('i');
-  const temp = document.createElement('p');
+const setCurrentCityHourlyWeather = (cityWeather) => {
+  for (let i = 0; i < 24; i++) {
+    const hourBlock = document.createElement('div');
+    const hour = document.createElement('p');
+    const weatherIcon = document.createElement('i');
+    const temp = document.createElement('p');
 
-  hourBlock.classList.add('hourly-data__content--block');
-  hour.classList.add('hourly-data__content--hour');
-  weatherIcon.classList.add('hourly-data__content--icon');
-  weatherIcon.classList.add('icon');
-  temp.classList.add('hourly-data__content--temp');
+    hourBlock.classList.add('hourly-data__content--block');
+    hour.classList.add('hourly-data__content--hour');
+    weatherIcon.classList.add('hourly-data__content--icon');
+    weatherIcon.classList.add('icon');
+    temp.classList.add('hourly-data__content--temp');
 
-  hour.textContent = `${
-    timestampToCityTime(cityWeatherPerHour.dt, timezone).hour
-  }:${timestampToCityTime(cityWeatherPerHour.dt, timezone).minutes}`;
-  weatherIcon.setAttribute(
+    hour.textContent = `${
+      timestampToCityTime(cityWeather.hourly[i].dt, cityWeather.timezone).hour
+    }:${
+      timestampToCityTime(cityWeather.hourly[i].dt, cityWeather.timezone)
+        .minutes
+    }`;
+    weatherIcon.setAttribute(
+      'data-icon',
+      weatherIconsTranslation[`I${cityWeather.hourly[i].weather[0].icon}`]
+    );
+    temp.textContent = `${Math.round(cityWeather.hourly[i].temp)}°`;
+
+    hourBlock.append(hour, weatherIcon, temp);
+    currentHourlyValues.appendChild(hourBlock);
+  }
+};
+
+/* Set Current City Weather */
+const setCurrentCityWeather = (cityWeather) => {
+  currentWeatherIcon.setAttribute(
     'data-icon',
-    weatherIconsTranslation[`I${cityWeatherPerHour.weather[0].icon}`]
+    weatherIconsTranslation[`I${cityWeather.current.weather[0].icon}`]
   );
-  temp.textContent = `${Math.round(cityWeatherPerHour.temp)}°`;
+  currentCityLabel.textContent = selectedCity.city;
+  currentTempLabel.textContent = `${Math.round(cityWeather.current.temp)}°`;
+  currentFeelTempLabel.textContent = `Feels like ${Math.round(
+    cityWeather.current.feels_like
+  )}°`;
+};
 
-  hourBlock.append(hour, weatherIcon, temp);
-  currentHourlyValues.appendChild(hourBlock);
+/* Set Current City Indicators */
+const setCurrentCityIndicators = (cityWeather) => {
+  currentSunriseValue.textContent = `${
+    timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone).hour
+  }:${
+    timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone)
+      .minutes
+  }`;
+  currentSunsetValue.textContent = `${
+    timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone).hour
+  }:${
+    timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone)
+      .minutes
+  }`;
+  currentUvValue.textContent = `${cityWeather.current.uvi}`;
+  currentHumidityValue.textContent = `${cityWeather.current.humidity}%`;
+  currentPressureValue.textContent = `${cityWeather.current.pressure} hPa`;
+  currentWindValue.textContent = `${cityWeather.current.wind_speed} km/h`;
 };
 
 /* Fetch API */
@@ -70,39 +108,11 @@ window
   .then((cityWeather) => {
     console.log(cityWeather);
     /* Main Data */
-    currentWeatherIcon.setAttribute(
-      'data-icon',
-      weatherIconsTranslation[`I${cityWeather.current.weather[0].icon}`]
-    );
-    currentCityLabel.textContent = selectedCity.city;
-    currentTempLabel.textContent = `${Math.round(cityWeather.current.temp)}°`;
-    currentFeelTempLabel.textContent = `Feels like ${Math.round(
-      cityWeather.current.feels_like
-    )}°`;
-
+    setCurrentCityWeather(cityWeather);
     /* Next 24 hours data */
-    for (let i = 0; i < 24; i++) {
-      createHourlyWeather(cityWeather.hourly[i], cityWeather.timezone);
-    }
-
+    setCurrentCityHourlyWeather(cityWeather);
     /* Main Indicators */
-    currentSunriseValue.textContent = `${
-      timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone)
-        .hour
-    }:${
-      timestampToCityTime(cityWeather.current.sunrise, cityWeather.timezone)
-        .minutes
-    }`;
-    currentSunsetValue.textContent = `${
-      timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone).hour
-    }:${
-      timestampToCityTime(cityWeather.current.sunset, cityWeather.timezone)
-        .minutes
-    }`;
-    currentUvValue.textContent = `${cityWeather.current.uvi}`;
-    currentHumidityValue.textContent = `${cityWeather.current.humidity}%`;
-    currentPressureValue.textContent = `${cityWeather.current.pressure} hPa`;
-    currentWindValue.textContent = `${cityWeather.current.wind_speed} km/h`;
+    setCurrentCityIndicators(cityWeather);
   });
 
 /* Event Listeners */
