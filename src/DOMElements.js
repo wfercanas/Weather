@@ -1,6 +1,7 @@
 /* All DOM Elements selection */
 
 /* Main data */
+const currentWeatherIcon = document.querySelector('.main-data__icon');
 const currentCityLabel = document.querySelector('.main-data__city');
 const currentTempLabel = document.querySelector('.main-data__temp');
 const currentFeelTempLabel = document.querySelector('.main-data__feelslike');
@@ -17,6 +18,7 @@ const currentPressureValue = document.getElementById('pressure');
 const currentHumidityValue = document.getElementById('humidity');
 
 export {
+  currentWeatherIcon,
   currentCityLabel,
   currentTempLabel,
   currentFeelTempLabel,
