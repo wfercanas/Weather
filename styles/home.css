@@ -1,7 +1,7 @@
 /* Main data section */
 .main-data {
   position: relative;
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
 }
 
 .main-data div {
@@ -27,7 +27,7 @@
   position: absolute;
   font-size: 16rem;
   right: -5rem;
-  top: -3rem;
+  top: -1rem;
 }
 
 .main-data__heart {
