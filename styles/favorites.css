@@ -1,16 +1,9 @@
-/* Page Title */
-/* .favorites__title {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 2rem;
-} */
-
 /* Cards */
 .favorites__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin: 0 2rem;
+  margin: 0 2rem 4rem;
 }
 
 .favorites__card {
@@ -26,6 +19,7 @@
 }
 
 .favorites__card--main-data {
+  min-height: 5.5rem;
   margin: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -40,11 +34,17 @@
   margin: 0.5rem 0 0;
 }
 
-.city,
-.country,
 .location {
   font-size: 0.7rem;
   margin-bottom: 0;
+}
+.city,
+.country {
+  display: block;
+}
+
+.country {
+  color: var(--gray);
 }
 
 .favorites__card--other-data {
@@ -76,22 +76,10 @@ body.night .favorites__card {
   background-color: var(--dimnight);
 }
 
-body.day .favorites__card--main-data i {
+.favorites__card--main-data i,
+.favorites__card--other-data i {
   color: var(--red);
   background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-body.night .favorites__card--main-data i {
-  color: var(--red);
-  background: -webkit-linear-gradient(
-    -45deg,
-    var(--blue),
-    var(--darkpurple),
-    var(--purple),
-    var(--blue)
-  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
