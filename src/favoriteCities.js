@@ -5,7 +5,7 @@ const favoriteCities = [
     lon: -122.4194,
   },
   {
-    city: 'Tokio',
+    city: 'Tokyo',
     lat: 35.6895,
     lon: 139.6917,
   },
