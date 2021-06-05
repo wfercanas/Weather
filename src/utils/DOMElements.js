@@ -17,6 +17,9 @@ const currentSunsetValue = document.getElementById('sunset');
 const currentPressureValue = document.getElementById('pressure');
 const currentHumidityValue = document.getElementById('humidity');
 
+/* Daily values */
+const currentNextSevenContainer = document.querySelector('.day__container');
+
 export {
   currentWeatherIcon,
   currentCityLabel,
@@ -29,4 +32,5 @@ export {
   currentSunsetValue,
   currentPressureValue,
   currentHumidityValue,
+  currentNextSevenContainer,
 };
