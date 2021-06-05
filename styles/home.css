@@ -1,6 +1,6 @@
 /* Global styles specific for this page */
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Sections margins */
