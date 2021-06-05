@@ -83,27 +83,10 @@ body.night .complement-data__indicator--title {
   margin-left: 0;
 }
 
-.hourly-data__headers {
-  padding: 1rem 1rem 0 0;
+.hourly-data__header {
   font-size: 0.8rem;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hourly-data__headers p {
   margin: 0;
-}
-
-.hourly-data__headers a {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-.hourly-data__headers a:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 .hourly-data__content--hour {
