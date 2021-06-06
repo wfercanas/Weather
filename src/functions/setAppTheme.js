@@ -1,7 +1,6 @@
 import { body } from '../utils/DOMElements.js';
 
 const setAppTheme = (cityWeather) => {
-  console.log(cityWeather);
   const testDay = /d/;
   const testNight = /n/;
   if (
