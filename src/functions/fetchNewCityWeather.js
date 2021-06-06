@@ -6,6 +6,7 @@ import { favoriteCities } from '../utils/favoriteCities.js';
 import { removeFavoriteCities } from './removeFavoriteCities.js';
 import { removePreviousCityHourlyWeather } from './removePreviousCityHourlyWeather.js';
 import { removePreviousCityNextSevenDaysWeather } from './removePreviousCityNextSevenDaysWeather.js';
+import { setAppTheme } from './setAppTheme.js';
 import { setCurrentCityWeather } from './setCurrentCityWeather.js';
 import { setCurrentCityIndicators } from './setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './setCurrentCityHourlyWeather.js';
@@ -20,6 +21,7 @@ const fetchNewCityWeather = (city) => {
     .fetch(coordinatesURL(city.lat, city.lon))
     .then((response) => response.json())
     .then((cityWeather) => {
+      setAppTheme(cityWeather);
       setCurrentCityWeather(cityWeather, city.city, city.country);
       setCurrentCityHourlyWeather(cityWeather);
       setCurrentCityIndicators(cityWeather);

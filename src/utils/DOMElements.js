@@ -1,5 +1,8 @@
 /* All DOM Elements selection */
 
+/* globals */
+const body = document.querySelector('body');
+
 /* Search-bar */
 const searchBar = document.querySelector('form');
 const searchInput = document.querySelector('input');
@@ -29,6 +32,7 @@ const currentNextSevenContainer = document.querySelector('.day__container');
 const favoritesContainer = document.querySelector('.favorites__container');
 
 export {
+  body,
   searchBar,
   searchInput,
   searchResults,

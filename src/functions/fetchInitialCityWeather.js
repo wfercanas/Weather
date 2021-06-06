@@ -3,6 +3,7 @@ import { coordinatesURL } from '../utils/API.js';
 import { favoriteCities } from '../utils/favoriteCities.js';
 
 /* Functions */
+import { setAppTheme } from './setAppTheme.js';
 import { setCurrentCityWeather } from './setCurrentCityWeather.js';
 import { setCurrentCityIndicators } from './setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './setCurrentCityHourlyWeather.js';
@@ -14,6 +15,7 @@ const fetchInitialCityWeather = (city) => {
     .fetch(coordinatesURL(city.lat, city.lon))
     .then((response) => response.json())
     .then((cityWeather) => {
+      setAppTheme(cityWeather);
       /* Main Data */
       setCurrentCityWeather(cityWeather, city.city, city.country);
       /* Next 24 hours data */
