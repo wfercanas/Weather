@@ -20,7 +20,7 @@ const fetchNewCityWeather = (city) => {
     .fetch(coordinatesURL(city.lat, city.lon))
     .then((response) => response.json())
     .then((cityWeather) => {
-      setCurrentCityWeather(cityWeather, city.city);
+      setCurrentCityWeather(cityWeather, city.city, city.country);
       setCurrentCityHourlyWeather(cityWeather);
       setCurrentCityIndicators(cityWeather);
       setCurrentCityNextSevenDaysWeather(cityWeather);

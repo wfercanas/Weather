@@ -15,7 +15,7 @@ const fetchInitialCityWeather = (city) => {
     .then((response) => response.json())
     .then((cityWeather) => {
       /* Main Data */
-      setCurrentCityWeather(cityWeather, city.city);
+      setCurrentCityWeather(cityWeather, city.city, city.country);
       /* Next 24 hours data */
       setCurrentCityHourlyWeather(cityWeather);
       /* Main Indicators */
