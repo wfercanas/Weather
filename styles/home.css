@@ -35,15 +35,14 @@
 }
 
 body.day .main-data__icon,
-body.day .hourly-data__content--icon {
+.hourly-data__content--icon {
   color: var(--red);
   background: -webkit-linear-gradient(-45deg, var(--orange), var(--red));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-body.night .main-data__icon,
-body.night .hourly-data__content--icon {
+body.night .main-data__icon {
   color: var(--red);
   background: -webkit-linear-gradient(
     -45deg,
