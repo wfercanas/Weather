@@ -3,7 +3,6 @@ import { favoriteButton } from '../utils/DOMElements.js';
 import { favoriteCities } from '../utils/favoriteCities.js';
 
 const setFavoriteButton = (city) => {
-  console.log(city);
   if (favoriteButton.classList.contains('on')) {
     favoriteButton.classList.remove('on');
     favoriteButton.classList.add('off');
