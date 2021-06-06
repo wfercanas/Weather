@@ -1,7 +1,7 @@
 /* Utils */
 import { cityURL } from '../utils/API.js';
 import { fetchNewCityWeather } from './fetchNewCityWeather.js';
-import { searchInput } from '../utils/DOMElements.js';
+import { searchInput, searchResults } from '../utils/DOMElements.js';
 
 const searchNewCity = (event) => {
   event.preventDefault();
@@ -16,6 +16,12 @@ const searchNewCity = (event) => {
       cityData.lon = responseJSON.coord.lon;
       fetchNewCityWeather(cityData);
       searchInput.value = '';
+      if (searchResults.textContent) {
+        searchResults.textContent = '';
+      }
+    })
+    .catch(() => {
+      searchResults.textContent = '❌ City not found, please check your search';
     });
 };
 

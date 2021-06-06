@@ -29,6 +29,12 @@
   cursor: pointer;
 }
 
+.search-results {
+  padding-left: 1rem;
+  font-weight: bold;
+  color: var(--red);
+}
+
 /* Menu */
 body.day #search-button {
   color: var(--night);

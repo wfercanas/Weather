@@ -3,6 +3,7 @@
 /* Search-bar */
 const searchBar = document.querySelector('form');
 const searchInput = document.querySelector('input');
+const searchResults = document.querySelector('.search-results');
 
 /* Main data */
 const currentWeatherIcon = document.querySelector('.main-data__icon');
@@ -30,6 +31,7 @@ const favoritesContainer = document.querySelector('.favorites__container');
 export {
   searchBar,
   searchInput,
+  searchResults,
   currentWeatherIcon,
   currentCityLabel,
   currentTempLabel,
