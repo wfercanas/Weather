@@ -33,6 +33,18 @@
   margin-top: 1rem;
 }
 
+.main-data__heart:hover {
+  cursor: pointer;
+}
+
+.main-data__heart.on {
+  color: var(--red);
+}
+
+.main-data__heart.off {
+  color: var(--gray);
+}
+
 body.day .main-data__icon,
 .hourly-data__content--icon {
   color: var(--red);
