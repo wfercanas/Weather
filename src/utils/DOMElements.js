@@ -13,6 +13,7 @@ const currentWeatherIcon = document.querySelector('.main-data__icon');
 const currentCityLabel = document.querySelector('.main-data__city');
 const currentTempLabel = document.querySelector('.main-data__temp');
 const currentFeelTempLabel = document.querySelector('.main-data__feelslike');
+const favoriteButton = document.querySelector('.main-data__heart');
 
 /* Hourly values */
 const currentHourlyValues = document.querySelector('.hourly-data__content');
@@ -40,6 +41,7 @@ export {
   currentCityLabel,
   currentTempLabel,
   currentFeelTempLabel,
+  favoriteButton,
   currentHourlyValues,
   currentSunriseValue,
   currentUvValue,
