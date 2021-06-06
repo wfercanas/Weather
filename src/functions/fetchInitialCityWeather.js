@@ -4,10 +4,11 @@ import { favoriteCities } from '../utils/favoriteCities.js';
 
 /* Functions */
 import { setAppTheme } from './setAppTheme.js';
-import { setCurrentCityWeather } from './setCurrentCityWeather.js';
-import { setCurrentCityIndicators } from './setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './setCurrentCityHourlyWeather.js';
+import { setCurrentCityIndicators } from './setCurrentCityIndicators.js';
 import { setCurrentCityNextSevenDaysWeather } from './setCurrentCityNextSevenDaysWeather.js';
+import { setCurrentCityWeather } from './setCurrentCityWeather.js';
+import { setFavoriteButton } from './setFavoriteButton.js';
 import { setFavoriteCities } from './setFavoriteCities.js';
 
 const fetchInitialCityWeather = (city) => {
@@ -16,15 +17,11 @@ const fetchInitialCityWeather = (city) => {
     .then((response) => response.json())
     .then((cityWeather) => {
       setAppTheme(cityWeather);
-      /* Main Data */
       setCurrentCityWeather(cityWeather, city.city, city.country);
-      /* Next 24 hours data */
+      setFavoriteButton(city);
       setCurrentCityHourlyWeather(cityWeather);
-      /* Main Indicators */
       setCurrentCityIndicators(cityWeather);
-      /* Next seven day forecast*/
       setCurrentCityNextSevenDaysWeather(cityWeather);
-      /* Favorite cities cards*/
       setFavoriteCities(favoriteCities);
     });
 };

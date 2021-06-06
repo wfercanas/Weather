@@ -11,6 +11,7 @@ import { setCurrentCityWeather } from './setCurrentCityWeather.js';
 import { setCurrentCityIndicators } from './setCurrentCityIndicators.js';
 import { setCurrentCityHourlyWeather } from './setCurrentCityHourlyWeather.js';
 import { setCurrentCityNextSevenDaysWeather } from './setCurrentCityNextSevenDaysWeather.js';
+import { setFavoriteButton } from './setFavoriteButton.js';
 import { setFavoriteCities } from './setFavoriteCities.js';
 
 const fetchNewCityWeather = (city) => {
@@ -23,6 +24,7 @@ const fetchNewCityWeather = (city) => {
     .then((cityWeather) => {
       setAppTheme(cityWeather);
       setCurrentCityWeather(cityWeather, city.city, city.country);
+      setFavoriteButton(city);
       setCurrentCityHourlyWeather(cityWeather);
       setCurrentCityIndicators(cityWeather);
       setCurrentCityNextSevenDaysWeather(cityWeather);
