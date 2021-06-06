@@ -1,7 +1,8 @@
 /* Main data section */
 .main-data {
-  position: relative;
-  padding: 2rem 0 2rem;
+  padding: 2rem 0 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-data div {
@@ -24,10 +25,8 @@
 }
 
 .main-data__icon {
-  position: absolute;
-  font-size: 16rem;
-  right: -5rem;
-  top: -1rem;
+  /* position: absolute; */
+  font-size: 10rem;
 }
 
 .main-data__heart {
