@@ -1,5 +1,9 @@
 /* All DOM Elements selection */
 
+/* Search-bar */
+const searchBar = document.querySelector('form');
+const searchInput = document.querySelector('input');
+
 /* Main data */
 const currentWeatherIcon = document.querySelector('.main-data__icon');
 const currentCityLabel = document.querySelector('.main-data__city');
@@ -24,6 +28,8 @@ const currentNextSevenContainer = document.querySelector('.day__container');
 const favoritesContainer = document.querySelector('.favorites__container');
 
 export {
+  searchBar,
+  searchInput,
   currentWeatherIcon,
   currentCityLabel,
   currentTempLabel,
