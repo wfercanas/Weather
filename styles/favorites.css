@@ -2,7 +2,7 @@
 .favorites__container {
   display: flex;
   gap: 1rem;
-  margin: 0 2rem 4rem;
+  margin: 0 2rem 4rem 0;
   flex-wrap: wrap;
 }
 
