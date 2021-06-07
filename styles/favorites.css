@@ -1,9 +1,9 @@
 /* Cards */
 .favorites__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 1rem;
   margin: 0 2rem 4rem;
+  flex-wrap: wrap;
 }
 
 .favorites__card {
@@ -11,6 +11,7 @@
   border-radius: 1rem;
   background-color: var(--white);
   box-shadow: 1px 1px 5px 1px var(--dimday);
+  width: 8rem;
 }
 
 .favorites__card:hover {
