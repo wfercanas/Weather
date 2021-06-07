@@ -85,7 +85,7 @@ body.night .complement-data__indicator--title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 0.7rem;
 }
 
 .hourly-data__content--block:first-child {
@@ -123,5 +123,3 @@ body.night .complement-data__indicator--title {
   font-weight: bold;
   margin: 0.5rem 0 0.8rem;
 }
-
-
