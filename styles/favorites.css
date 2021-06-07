@@ -11,7 +11,7 @@
   border-radius: 1rem;
   background-color: var(--white);
   box-shadow: 1px 1px 5px 1px var(--dimday);
-  width: 8rem;
+  width: 7rem;
 }
 
 .favorites__card:hover {
