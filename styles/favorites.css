@@ -83,13 +83,3 @@ body.night .favorites__card {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* Menu */
-
-body.day #favorites-button {
-  color: var(--dimnight);
-}
-
-body.night #favorites-button {
-  color: var(--white);
-}

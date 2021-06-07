@@ -34,12 +34,3 @@
   font-weight: bold;
   color: var(--red);
 }
-
-/* Menu */
-body.day #search-button {
-  color: var(--night);
-}
-
-body.night #search-button {
-  color: var(--day);
-}

@@ -124,10 +124,4 @@ body.night .complement-data__indicator--title {
   margin: 0.5rem 0 0.8rem;
 }
 
-body.day #home-button {
-  color: var(--dimnight);
-}
 
-body.night #home-button {
-  color: var(--dimday);
-}

@@ -71,10 +71,23 @@ p {
 
 .menu a {
   text-decoration: none;
-  color: var(--gray);
 }
 
 .menu a:hover {
   cursor: pointer;
   scale: 1.2;
+}
+
+body.day #home-button,
+body.day #calendar-button,
+body.day #favorites-button,
+body.day #search-button {
+  color: var(--dimnight);
+}
+
+body.night #home-button,
+body.night #calendar-button,
+body.night #favorites-button,
+body.night #search-button {
+  color: var(--dimday);
 }

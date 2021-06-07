@@ -16,14 +16,14 @@
     <title>Weather App</title>
   </head>
   <body class="day">
-    <section class="search">
+    <section class="search" id="search">
       <form class="search-bar">
         <input class="search-input" type="text" placeholder="Search" />
         <button type="submit" class="icon-search"></button>
       </form>
       <p class="search-results"></p>
     </section>
-    <section class="main-data">
+    <section class="main-data" id="main-data">
       <div>
         <p class="main-data__city"></p>
         <p class="main-data__temp"></p>
@@ -66,19 +66,21 @@
       <h2>Next 7 days</h2>
       <div class="day__container"></div>
     </section>
-    <section class="favorite-cities">
+    <section class="favorite-cities" id="favorite-cities">
       <h2>Favorite Cities</h2>
       <div class="favorites__container"></div>
     </section>
     <section class="menu">
-      <a href="/"><i id="home-button" class="menu__item icon-home"></i></a>
-      <a href="./pages/calendar.html"
+      <a href="#main-data"
+        ><i id="home-button" class="menu__item icon-home"></i
+      ></a>
+      <a href="#next-seven"
         ><i id="calendar-button" class="menu__item icon-calendar"></i
       ></a>
-      <a href="./pages/favorites.html"
-        ><i id="favorites-buttons" class="menu__item icon-heart"></i
+      <a href="#favorite-cities"
+        ><i id="favorites-button" class="menu__item icon-heart"></i
       ></a>
-      <a href="./pages/search.html"
+      <a href="#search"
         ><i id="search-button" class="menu__item icon-search"></i
       ></a>
     </section>
