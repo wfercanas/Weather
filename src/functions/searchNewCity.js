@@ -3,6 +3,9 @@ import { cityURL } from '../utils/API.js';
 import { fetchNewCityWeather } from './fetchNewCityWeather.js';
 import { searchInput, searchResults } from '../utils/DOMElements.js';
 
+/* Functions */
+import { changeSelectedCity } from '../index.js';
+
 const searchNewCity = (event) => {
   event.preventDefault();
   const cityData = {};
@@ -15,6 +18,7 @@ const searchNewCity = (event) => {
       cityData.lat = responseJSON.coord.lat;
       cityData.lon = responseJSON.coord.lon;
       fetchNewCityWeather(cityData);
+      changeSelectedCity(cityData);
       searchInput.value = '';
       if (searchResults.textContent) {
         searchResults.textContent = '';
