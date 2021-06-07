@@ -4,7 +4,7 @@ Weather App Project developed for the Platzi "Manipulating DOM" course. The proj
 
 ## Project URL
 
-🚀 You can check the project working in the following link: https://wfercanas.github.io/Mediaplayer/
+🚀 You can check the project working in the following link: https://wfercanas.github.io/Weather/
 
 ## Project Description
 
