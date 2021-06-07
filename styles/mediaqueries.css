@@ -1,0 +1,25 @@
+@media screen and (min-width: 950px) {
+  body {
+    display: grid;
+    grid-template-columns: auto 50vw;
+    gap: 2rem;
+    overflow: scroll;
+    padding-bottom: 3rem;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  #search {
+    grid-column: 1 / span 2;
+  }
+
+  #main-data {
+    grid-column: 1 / span 2;
+  }
+
+  .menu {
+    padding: 1rem 20vw;
+  }
+}
