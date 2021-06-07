@@ -2,7 +2,7 @@
   body {
     display: grid;
     grid-template-columns: auto 50vw;
-    gap: 2rem;
+    gap: 1rem 5rem;
     overflow: scroll;
     padding-bottom: 3rem;
   }
