@@ -11,7 +11,7 @@
   background-color: var(--white);
   box-shadow: 1px 1px 5px 1px var(--dimday);
   width: 7rem;
-  margin: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .favorites__card:hover {
